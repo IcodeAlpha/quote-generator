@@ -5,8 +5,7 @@
     <title>Quote of the day</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    
+<body>  
 <div class="quote-box">
     <h2>Qoute of the day</h2>
     <blockquote id="quote">Loading..</blockquote>
@@ -16,7 +15,6 @@
         <button onclick="tweet()"><img src="twitter.png">Tweet</button>
     </div>
 </div>
-
 <script>
 const quote = document.getElementById("quote");
 const author = document.getElementById("author");
@@ -29,17 +27,10 @@ async function getquote(url){
     quote.innerHTML = data.content;
     author.innerHTML = data.author;
 }
-
 getquote(api_url);
-
 function tweet(){
     window.open("https://twitter.com/intent/tweet?text=" + quote.innerHTML + "----by " +author.innerHTML,"Tweet Window", "width=600, height=300");
-
 }
-
 </script>
-
-
-
 </body>
 </html>
